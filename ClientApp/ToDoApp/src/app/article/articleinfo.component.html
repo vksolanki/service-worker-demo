@@ -1,0 +1,4 @@
+<div class="card note-info" *ngIf="Article">
+    <div class="card-title note-name">{{Article.title}}</div>
+    <div class="card-body">{{Article.desc | subword:10}}</div>
+</div>

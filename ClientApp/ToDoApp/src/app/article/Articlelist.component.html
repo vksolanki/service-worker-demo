@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="header padt-5 padb-5">
+        <h1>Service Worker Demo</h1>
+        <span>Add Articles then go offline and still you can access list </span>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 padt-5 padb-5">
+            <a [routerLink]="['/addarticle']" class="btn btn-primary" (click)="addArticle()">Add Article</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 padt-5 padb-5" *ngFor="let _article of ArticleList">
+            <articleinfo [Article]="_article"></articleinfo>
+        </div>
+    </div>
+</div>

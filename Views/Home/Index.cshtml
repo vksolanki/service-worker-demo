@@ -1,0 +1,47 @@
+﻿@{
+    Layout=null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <base href = "/">
+      <title>Angular QuickStart</title>
+      <meta charset = "UTF-8">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      
+      <base href = "/">
+
+    
+   </head>
+
+   <body>
+
+      <app-root></app-root>
+ <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log(`Service Worker registered! Scope: ${registration.scope}`);
+        })
+        .catch(err => {
+          console.log(`Service Worker registration failed: ${err}`);
+        });
+    });
+  }
+</script>
+  <link rel="stylesheet" type="text/css" href="/css/site.css" />
+
+  <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
+  <script type="text/javascript" src="/bootstrap/script/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/app/inline.bundle.js"></script>
+  <script type="text/javascript" src="/app/polyfills.bundle.js"></script>
+  <script type="text/javascript" src="/app/styles.bundle.js"></script>
+  <script type="text/javascript" src="/app/vendor.bundle.js"></script>
+  <script type="text/javascript" src="/app/main.bundle.js"></script>
+
+   </body>
+</html>
